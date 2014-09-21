@@ -1,0 +1,38 @@
+renatolg:x:8536030:0:Renato Lui Geh:/bin:sh
+yancouto:x:8536023:0:Yan Soares Couto:/bin:sh
+
+I.   Escolhemos: Opção 1.
+
+II.  Source code:
+    - O arquivo fonte está no arquivo dusers.py.
+    - A execução do script é a seguinte:
+        o python3 dusers.py [OPTIONS]
+            -> OPTIONS:
+                | -a := analisa por nome (primeiro e último) por múltiplas ocorrências
+                | -u := analisa por UID por múltiplas ocorrências
+            -> Toma pela entrada padrão o arquivo a ser analisado.
+            -> Manda pela saída padrão o resultado da análise.
+    - O script usa o módulo sys.
+    - O script acaba sua execução quando EOF é encontrado pela entrada padrão.
+
+III. Teste:
+    - Criamos um shell script [test.sh] para analisar a saída.
+    - A execução do script é a seguinte:
+        o sh test.sh [TARGET] [MAX_CASES]
+            -> TARGET é o script em Python 3 a ser analisado.
+            -> Procura por arquivos do tipo:
+                | in$i$j  := entrada a ser utilizada pelo TARGET. $i e $j são o número do caso e seu modo respectivamente. Por exemplo:
+                    >> in1a : representa a entrada do caso 1 no modo -a.
+                    >> in3u : representa a entrada do caso 3 no modo -u.
+                | out$i$j := saída a ser comparado com a saída do TARGET. $i e $j são o número do caso e seu modo respectivamente. Por exemplo:
+                    >> out1a : representa a saída do caso 1 no modo -a.
+                    >> out3u : representa a saída do caso 3 no modo -u.
+            -> Para cada arquivo do tipo in$i$j que representa a entrada deve-se ter um respectivo out$i$j que representa a saída ideal.
+            -> Cada out$i$j será comparado com o comando [diff] com a saída do script TARGET.
+            -> Para cada caso $i e seu respectivo caso $j teremos as possíveis saídas dadas pelo shell script:
+                | "O teste [$i, $j] falhou! :((("           : o script TARGET produziu uma saída diferente da saída ideal.
+                | "O teste [$i, $j] passou com sucesso! :)" : o script TARGET produziu uma saída igual a da saída ideal.
+            -> O valor máximo de casos $i pode ser passado como segundo argumento pelo script. O valor de $i então estará no intervalo (0, MAX_CASES].
+            -> Caso MAX_CASES não seja definido o valor padrão 3 será usado.
+    - No arquivo out1a nós propositalmente alteramos o arquivo para um valor errado ao esperado pelo script. Desse modo pudemos testar se o shell script funcionava.
+
