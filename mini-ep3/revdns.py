@@ -27,8 +27,8 @@ while True:
 		break
 
 for k in hosts:
-	print("NS", end=' ')
-	print("ns", *k.domain, sep='.')
+	print("NS", end=" ")
+	print("ns", *k.domain, sep='.', end=".\n")
 
 	sorted_list = sorted(k.entries)
 	for i in sorted_list:
