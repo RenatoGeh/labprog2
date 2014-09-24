@@ -1,0 +1,13 @@
+@ IN SOA ns.dominio.exemplo. admin.dominio.exemplo (
+			2014090601 ; Serial
+			604800	   ; Refresh
+			86400	   ; Retry
+			2419200	   ; Expire
+			604800 )   ; Negative Cache TTL
+
+	NS ns.dominio.exemplo
+2 PTR gateway.dominio.exemplo.
+3 PTR shell.dominio.exemplo.
+4 PTR ns.dominio.exemplo.
+9 PTR www.dominio.exemplo.
+13 PTR mail.dominio.exemplo.

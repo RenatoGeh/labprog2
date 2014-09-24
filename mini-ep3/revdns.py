@@ -12,7 +12,10 @@ current = -1
 while True:
 	try:
 		s = input()
+		if not ignored:
+			print(s)		
 		s = s.strip()
+		
 		if not ignored and (s.split(' ')[0] == "NS"):
 			ignored = True
 			hosts.append(Host(s.split()[1].split('.')))
@@ -22,13 +25,11 @@ while True:
 			if len(pieces) > 2:
 				h = hosts[current]
 				h.add_entry(pieces[0], pieces[2])
-			
+
 	except(EOFError):
 		break
 
 for k in hosts:
-	print("NS", end=" ")
-	print("ns", *k.domain, sep='.', end=".\n")
 
 	sorted_list = sorted(k.entries)
 	for i in sorted_list:

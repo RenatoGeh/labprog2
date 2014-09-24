@@ -1,0 +1,26 @@
+Renato Lui Geh: 8536030
+Yan Soares Couto: 8536023
+
+I.   Escolhemos: Opção 2.
+
+II.  Source code:
+    - O arquivo fonte está no arquivo revdns.py.
+    - A execução do script é a seguinte:
+            -> Toma pela entrada padrão o arquivo a ser analisado.
+            -> Manda pela saída padrão o DNS reverso.
+
+III. Teste:
+    - Criamos um shell script [test.sh] para analisar a saída.
+    - A execução do script é a seguinte:
+        o sh test.sh [TARGET] [MAX_CASES]
+            -> TARGET é o script em Python 3 a ser analisado.
+            -> Procura por arquivos do tipo:
+                | in$i  := entrada a ser utilizada pelo TARGET. $i é o número do caso
+                | out$i := saída a ser comparado com a saída do TARGET. $i é o número do caso
+            -> Para cada arquivo do tipo in$i que representa a entrada deve-se ter um respectivo out$i que representa a saída ideal.
+            -> Cada out$i será comparado com o comando [diff] com a saída do script TARGET.
+            -> Para cada caso $i teremos as possíveis saídas dadas pelo shell script:
+                | "O teste [$i] falhou! :((("           : o script TARGET produziu uma saída diferente da saída ideal.
+                | "O teste [$i] passou com sucesso! :)" : o script TARGET produziu uma saída igual a da saída ideal.
+            -> O valor máximo de casos $i pode ser passado como segundo argumento pelo script. O valor de $i então estará no intervalo (0, MAX_CASES].
+            -> Caso MAX_CASES não seja definido o valor padrão 1 será usado.
