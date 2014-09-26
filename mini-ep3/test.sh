@@ -1,6 +1,6 @@
 #!/bin/bash
 
-max=${2:-1}
+max=${2:-3}
 
 for i in `seq 1 $max`
 do

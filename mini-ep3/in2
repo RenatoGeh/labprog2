@@ -13,3 +13,19 @@ ns	A 192.168.240.4
 shell	A 192.168.240.3
 www	A 192.168.240.9
 
+	NS ns.lab.prog
+gold	A 192.168.0.1
+gubi	A 192.168.0.2
+
+	NS ns.ime.usp.br
+www		A 192.168.0.101
+maratona	A 192.168.0.204
+bcc		A 192.168.0.32
+
+	NS ns.ime.prof.br
+gold	A 192.168.0.1234
+cef		A 192.168.0.4242
+gubi	A 192.168.0.4321
+futorny	A 192.168.0.9999
+pf 		A 192.168.0.1
+coelho	A 192.168.0.8888

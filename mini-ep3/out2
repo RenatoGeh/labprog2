@@ -12,3 +12,17 @@ $TTL 604800
 4 PTR ns.dominio.exemplo.
 9 PTR www.dominio.exemplo.
 13 PTR mail.dominio.exemplo.
+	NS ns.lab.prog
+1 PTR gold.lab.prog.
+2 PTR gubi.lab.prog.
+	NS ns.ime.usp.br
+32 PTR bcc.ime.usp.br.
+101 PTR www.ime.usp.br.
+204 PTR maratona.ime.usp.br.
+	NS ns.ime.prof.br
+1 PTR pf.ime.prof.br.
+1234 PTR gold.ime.prof.br.
+4242 PTR cef.ime.prof.br.
+4321 PTR gubi.ime.prof.br.
+8888 PTR coelho.ime.prof.br.
+9999 PTR futorny.ime.prof.br.

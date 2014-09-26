@@ -23,4 +23,4 @@ III. Teste:
                 | "O teste [$i] falhou! :((("           : o script TARGET produziu uma saída diferente da saída ideal.
                 | "O teste [$i] passou com sucesso! :)" : o script TARGET produziu uma saída igual a da saída ideal.
             -> O valor máximo de casos $i pode ser passado como segundo argumento pelo script. O valor de $i então estará no intervalo (0, MAX_CASES].
-            -> Caso MAX_CASES não seja definido o valor padrão 1 será usado.
+            -> Caso MAX_CASES não seja definido o valor padrão 3 será usado.
