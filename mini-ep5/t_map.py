@@ -20,7 +20,7 @@ def t_NUMBER(token):
 	token.value = int(token.value)
 	return token
 
-t_ignore = r' \t'
+t_ignore = ' \t'
 
 def t_error(token):
 	print("'%s' is not a valid token." % token.value[0])

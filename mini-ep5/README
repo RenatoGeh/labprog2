@@ -1,0 +1,5 @@
+Para rodar a calculadora RPN:
+    python3 exp_parser.py
+
+Aceita pela entrada padrão caracteres do tipo [0-9] ou {+-*/}.
+Imprime na saída padrão o resultado da conta.
