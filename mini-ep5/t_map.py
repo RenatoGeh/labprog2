@@ -23,7 +23,7 @@ def t_NUMBER(token):
 t_ignore = r' \t'
 
 def t_error(token):
-	print "'%s' is not a valid token." % token.value[0]
+	print("'%s' is not a valid token." % token.value[0])
 	token.lexer.skip(1)
 
 lexer = lex.lex()
