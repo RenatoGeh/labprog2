@@ -1,0 +1,44 @@
+Mini-EP6 - Relatório
+
+Nome: Renato Lui Geh
+NUSP: 8536030
+
+1. Escolha do projeto:
+
+	O código que escolhi para aplicar os padrões propostos foi o próprio projeto. Como explicarei na próxima seção, eu utilizei a última versão (etapa 2) do projeto como base para esse mini-ep.
+
+2. git e submodules:
+
+	Para que pudesse aplicar os padrões sem interferir no projeto principal, eu sei a ferramenta submodule do Git para dar fork no repositório e não afetar no main branch.
+	
+	O repositório desse mini-ep encontra-se em:
+		
+		http://www.github.com/RenatoGeh/labprog2/mini-ep6/
+
+	Enquanto o repositório do projeto encontra-se em:
+		
+		http://www.github.com/RenatoGeh/Psychomon/
+
+3. Aplicação do padrão de design:
+	
+	Ao analisar o projeto Psychomon, notei que havia várias classes onde o construtor era usado quando o usuário poderia, ao invés de criar uma nova instância, apenas chamar uma Factory que criaria a instância que ele precisasse.
+
+	Esse problema fica mais evidente na classe Pokemon. Para que o usuário possa criar uma instância dessa classe o mesmo precisa primeiro saber como se instância os Attributes e Attacks, quando ele poderia simplesmente chamar uma Factory que lidasse com tudo isso sem ter de procurar em módulos diferentes.
+
+	Portanto, o padrão de design escolhido nesse mini-ep foi Factory.
+
+	Para isso criei a class PokeFactory.
+
+4. Class PokeFactory:
+
+	PokeFactory é uma module que possue apenas funções de object creation.
+	
+	O objetivo dessa classe é centralizar toda a criação de objetos com o intuito de facilitar a refatoração de código quando for necessário. Desse jeito, quando houver alguma mudança na criação de um objeto, a mudança poderá ser facilmente identificada e mudada por essa classe.
+
+5. Testes:
+
+    Além da criação da PokeFactory, há uma classe onde testei se tudo ocorria como planejado.
+    
+    Dentro da pasta tests/ há todos os testes que o projeto usa. Um deles é Test_PokeFactory. Nessa classe testamos se tudo fosse usado por constructor diretamente teríamos os mesmo resultados que ao usarmos PokeFactory.
+
+ 
